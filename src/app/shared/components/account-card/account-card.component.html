@@ -1,0 +1,57 @@
+<section class="relative">
+  <div class="logout-menu hidden absolute right-0 w-48 mt-10 origin-top-righ">
+    <div class="w-full bg-white rounded-lg px-4 py-3 shadow-md">
+      <button
+        class="
+          w-full
+          text-white
+          hover:opacity-70
+          bg-island-300
+          font-semibold
+          px-3
+          py-2
+          rounded-lg
+        "
+        (click)="onLogout()"
+      >
+        Cerrar sesión
+      </button>
+    </div>
+  </div>
+  <div
+    class="
+      relative
+      hover:bg-gray-100 hover:text-island-600
+      py-1
+      pl-1
+      pr-3
+      rounded-full
+    "
+    (click)="onLogoutMenuClick()"
+  >
+    <button class="flex items-center hover:opacity-90">
+      <picture>
+        <img
+          class="h-8 w-8 rounded-full object-cover"
+          src="assets/profile.jpeg"
+          alt="image-profile"
+        />
+      </picture>
+      <span class="ml-2 font-semibold">Joan Pava</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="ml-4 feather feather-chevron-down"
+      >
+        <polyline points="6 9 12 15 18 9" />
+      </svg>
+    </button>
+  </div>
+</section>
