@@ -1,0 +1,91 @@
+<main class="container py-4 m-auto">
+  <header class="relative flex items-center justify-center pt-7 mb-6">
+    <div>
+      <img
+        class="
+          h-40
+          md:h-60
+          xl:h-64
+          min-w-full
+          w-full
+          object-cover
+          rounded-lg
+          filter
+          brightness-50
+        "
+        [src]="bannerImg"
+        alt="banner"
+      />
+    </div>
+    <div class="absolute">
+      <h1
+        class="
+          text-white text-center
+          font-black
+          text-3xl
+          sm:text-4xl
+          xl:text-6xl
+        "
+      >
+        {{ store ? store.name : "" }}
+      </h1>
+    </div>
+  </header>
+  <section class="">
+    <div class="flex flex-wrap gap-x-3 gap-y-2 justify-center w-full mb-4">
+      <div *ngFor="let label of store?.labels">
+        <span
+          class="
+            px-3
+            py-1
+            bg-yellow-500
+            hover:bg-yellow-600
+            text-white text-sm
+            font-semibold
+            rounded-lg
+            cursor-pointer
+          "
+          >{{ label }}</span
+        >
+      </div>
+    </div>
+    <header class="flex gap-3 items-center pb-3">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-grid w-4 text-gray-400"
+      >
+        <rect x="3" y="3" width="7" height="7" />
+        <rect x="14" y="3" width="7" height="7" />
+        <rect x="14" y="14" width="7" height="7" />
+        <rect x="3" y="14" width="7" height="7" />
+      </svg>
+      <h1 class="md:text-xl sm:text-lg text-lg font-bold">Productos</h1>
+    </header>
+    <div>
+      <ng-container
+        *ngIf="products.length == 0; then thenTemplate; else elseTemplate"
+      ></ng-container>
+      <ng-template #thenTemplate>
+        <p class="">
+          No hay Productos acualmente en esta tienda.
+          <span class="font-semibold">¡Vuelve más tarde!</span>
+        </p>
+      </ng-template>
+      <ng-template #elseTemplate>
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <article class="" *ngFor="let product of products">
+            <app-product-card [product]="product"></app-product-card>
+          </article>
+        </section>
+      </ng-template>
+    </div>
+  </section>
+</main>
