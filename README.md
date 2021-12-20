@@ -14,9 +14,9 @@ Software web de tipo e-commerce. Construido usando `Angular 12` and `tailwindcss
 
 Ha sido muy interesante construir este prototipo. Es muy bello el diseño del que se parte.
 En mi solución, busque construir una arquitectura en la que la UI estuviera separada de la insfraestrutura de la API y la lógica de negocio.
-Es por eso que en el múdlo Core, creo tres capas que permite separar la lógica y la infraestructura muy bien. Por ejemplo, para 
+Es por eso que en el módulo Core, creo tres capas que permite separar la lógica y la infraestructura muy bien. Por ejemplo, para 
 obtener los datos de la categoría, es necesario un atributo adicional en la vista, pero la vista no tiene por qué encargarse eso.
-Es por eso que construí un mapper y usando los métodos porpios de los Observables, mapeo el objeto a como los neesitp, sin delegarle eso a la vista. 
+Es por eso que construí un mapper y usando los métodos porpios de los Observables, mapeo el objeto a como los necesito, sin delegarle eso a la vista. 
 
 Es posible que no les salga el icono del check en la card de categoría. La razón puede deberse a uso `filter` para oscurecer la tarjeta, y puede entrar en conflicto con el svg y no llegar a mostrarlo.
 
