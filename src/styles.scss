@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+// .input-autofill-color-none {
+//   box-shadow: 0 0 0 30px white inset !important;
+//   -webkit-box-shadow: 0 0 0 30px white inset !important;
+// }
+
+.snap-x {
+  --tw-scroll-snap-strictness: proximity;
+  scroll-snap-type: x var(--tw-scroll-snap-strictness);
+}
+
+.snap-center {
+  scroll-snap-align: center;
+}
+
