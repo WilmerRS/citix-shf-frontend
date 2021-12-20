@@ -1,0 +1,23 @@
+<div>
+  <header class="flex justify-between items-end pb-3">
+    <h1 class="md:text-xl sm:text-lg text-lg font-bold">Categorías</h1>
+    <div class="flex">
+      <app-icon-button
+        [icon]="'arrow-left'"
+        [disabled]="true"
+      ></app-icon-button>
+      <app-icon-button
+        [icon]="'arrow-right'"
+        [disabled]="false"
+      ></app-icon-button>
+    </div>
+  </header>
+  <section class="flex gap-4 w-full bg-white rounded-lg p-4">
+    <article *ngFor="let category of categories; let i = index">
+      <app-category-card
+        (onSelected)="categoryToggle($event)"
+        [category]="category"
+      ></app-category-card>
+    </article>
+  </section>
+</div>
