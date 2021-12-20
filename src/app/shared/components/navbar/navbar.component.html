@@ -1,0 +1,148 @@
+<div class="sticky top-0 z-40 w-full bg-white shadow-md px-3 py-2">
+  <nav>
+    <div class="px-4">
+      <div class="flex justify-between">
+        <div class="flex">
+          <app-burger-button
+            class="md:hidden pr-1"
+            (handleClick)="onBurgerClick($event)"
+          ></app-burger-button>
+          <app-brand></app-brand>
+        </div>
+        <!-- Secondary Navbar items -->
+        <div class="flex gap-4 items-center" *ngIf="!currentUser">
+          <a
+            class="
+              text-sm text-island-600
+              font-semibold
+              hover:text-island-800
+              px-4
+              py-2
+              hover:bg-gray-100
+              rounded-lg
+            "
+            [routerLink]="['/login']"
+            >Iniciar sesión</a
+          >
+          <div
+            class="
+              cursor-pointer
+              rounded-full
+              w-9
+              h-9
+              p-1
+              bg-gray-100
+              hover:bg-gray-200 hover:text-island-600
+              transition-all
+              flex
+              align-middle
+            "
+            title="Ayuda"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-help-circle w-4 m-auto"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="hidden md:flex gap-1 items-center space-x-3"
+          *ngIf="currentUser"
+        >
+          <div
+            class="
+              cursor-pointer
+              rounded-full
+              w-9
+              h-9
+              p-1
+              hover:bg-gray-100 hover:text-island-600
+              transition-all
+              flex
+              align-middle
+            "
+            title="Carrito de compras"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-shopping-cart w-4 m-auto"
+              _ngcontent-mjl-c55=""
+            >
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              ></path>
+            </svg>
+          </div>
+          <div>
+            <app-account-card></app-account-card>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div class="hidden mobile-menu">
+      <div class="w-72 m-auto">
+        <div
+          class="
+            cursor-pointer
+            rounded-full
+            p-1
+            hover:bg-gray-100 hover:text-island-600
+            transition-all
+            h-10
+            flex
+            items-center
+            mb-2
+          "
+          title="Carrito de compras"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-shopping-cart w-4 m-auto"
+            _ngcontent-mjl-c55=""
+          >
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path
+              d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+            ></path>
+          </svg>
+          <span class="font-semibold">Carrito de compras</span>
+        </div>
+        <div>
+          <app-account-card></app-account-card>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
