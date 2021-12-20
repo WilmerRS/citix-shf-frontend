@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>🌀</h1>
+    <h1><img src="https://github.com/WilmerRS/citix-shf-frontend/blob/main/src/assets/logo-x.png?raw=true" width="60"/></h1>
 </div>
 
 <h1 style="margin-top:10px;" align="center"> ➰
@@ -30,7 +30,22 @@ Busco mostrarles con este prototipo, mi conocimiento en frontend así como en ar
 4. Run the project: `ng serve`.
 5. Enjoy!
    
-### 🐣 Screenshots
+# 🐣 Screenshots
+
+## Home page
+
 <div align="center">
-    <img src="https://raw.githubusercontent.com/WilmerRS/Logic_Math/master/src/main/java/resources/data/Iconos/1x/Frame%2089.png" width="1000"/>
+    <img src="https://github.com/WilmerRS/citix-shf-frontend/blob/main/src/assets/SC_home.png?raw=true" width="1000"/>
+</div>
+
+## Store detail page
+
+<div align="center">
+    <img src="https://github.com/WilmerRS/citix-shf-frontend/blob/main/src/assets/SC_detail_store.png?raw=true" width="1000"/>
+</div>
+
+## Login page
+
+<div align="center">
+    <img src="https://github.com/WilmerRS/citix-shf-frontend/blob/main/src/assets/SC_login.png?raw=true" width="1000"/>
 </div>
