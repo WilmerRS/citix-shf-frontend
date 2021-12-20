@@ -1,27 +1,36 @@
-# EcommerceShf
+<div align="center">
+    <h1>🌀</h1>
+</div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
+<h1 style="margin-top:10px;" align="center"> ➰
+  <strong>  Citix </strong> ➿ 
+</h1>
 
-## Development server
+## 🐙 Project
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Software web de tipo e-commerce. Construido usando `Angular 12` and `tailwindcss`.
 
-## Code scaffolding
+## 🐗 Sobre la solución
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ha sido muy interesante construir este prototipo. Es muy bello el diseño del que se parte.
+En mi solución, busque construir una arquitectura en la que la UI estuviera separada de la insfraestrutura de la API y la lógica de negocio.
+Es por eso que en el múdlo Core, creo tres capas que permite separar la lógica y la infraestructura muy bien. Por ejemplo, para 
+obtener los datos de la categoría, es necesario un atributo adicional en la vista, pero la vista no tiene por qué encargarse eso.
+Es por eso que construí un mapper y usando los métodos porpios de los Observables, mapeo el objeto a como los neesitp, sin delegarle eso a la vista. 
 
-## Build
+Es posible que no les salga el icono del check en la card de categoría. La razón puede deberse a uso `filter` para oscurecer la tarjeta, y puede entrar en conflicto con el svg y no llegar a mostrarlo.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Busco mostrarles con este prototipo, mi conocimiento en frontend así como en arquitecturas de software, intentando escribir código lo más limpio posible.
 
-## Running unit tests
+## 🐋 To get started
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clone this repositoy: `https://github.com/WilmerRS/citix-shf-frontend.git`.
+2. Enter project folder: `cd citix-shf-frontend`.
+3. Install dependencies: `npm install`.
+4. Run the project: `ng serve`.
+5. Enjoy!
+   
+### 🐣 Screenshots
+<div align="center">
+    <img src="https://raw.githubusercontent.com/WilmerRS/Logic_Math/master/src/main/java/resources/data/Iconos/1x/Frame%2089.png" width="1000"/>
+</div>
