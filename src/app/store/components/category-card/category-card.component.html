@@ -1,0 +1,42 @@
+<section
+  class="
+    block
+    cursor-pointer
+    transition-transform
+    transform
+    duration-500
+    hover:scale-105
+  "
+  (click)="handleSelected()"
+>
+  <div class="relative flex items-center justify-center rounded-lg pb-3">
+    <ng-container *ngIf="category.selected">
+      <svg
+        class="feather feather-check absolute text-white"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <polyline points="20 6 9 17 4 12" />
+      </svg>
+    </ng-container>
+    <div>
+      <img
+      class="rounded-lg h-28 w-60 object-cover transition duration-300"
+      [ngClass]="{ 'filter brightness-50': category.selected }"
+      src="{{ category.picture }}"
+      alt="{{ category.name }}"
+    />
+    </div>
+  </div>
+  <p
+    class="text-center font-semibold"
+    [ngClass]="{ 'text-gray-400': !category.selected }"
+  >
+    {{ category.name }}
+  </p>
+</section>
