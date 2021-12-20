@@ -1,0 +1,77 @@
+<section
+  class="
+    block
+    cursor-pointer
+    transition-transform
+    transform
+    duration-500
+    hover:scale-105
+  "
+  (click)="handlePromoClick()"
+>
+  <div class="relative flex justify-end pb-2">
+    <span
+      class="
+        absolute
+        mr-2
+        mt-2
+        px-2
+        py-1
+        rounded-lg
+        text-white
+        bg-red-500
+        hover:bg-red-600
+        text-xs
+        font-semibold
+      "
+    >
+      $ {{ promo.price | number }}
+    </span>
+    <img
+      class="rounded-lg h-28 w-80 object-cover transition duration-300"
+      src="{{ promo.picture }}"
+      alt="{{ promo.name }}"
+    />
+  </div>
+  <h2 class="text-base font-semibold">{{ promo.name }}</h2>
+  <div class="flex gap-3">
+    <div class="flex items-center gap-1">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-map-pin w-4 text-gray-400 hover:text-island-300"
+      >
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+        <circle cx="12" cy="10" r="3" />
+      </svg>
+      <span class="text-sm text-gray-600">{{ promo.store }}</span>
+    </div>
+    <div class="flex items-center gap-1" (click)="handleLike()">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        [ngClass]="{ 'fill-yellow': liked }"
+        class="feather feather-star w-4 text-gray-400 hover:text-yellow-300"
+      >
+        <polygon
+          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+        />
+      </svg>
+      <span class="text-sm text-gray-600">{{ promo.rating }}</span>
+    </div>
+  </div>
+</section>
