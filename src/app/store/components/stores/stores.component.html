@@ -1,0 +1,13 @@
+<div>
+  <header class="flex gap-3 items-center pb-3">
+    <i class="w-4 text-gray-400" data-feather="shopping-cart"></i>
+    <h1 class="md:text-xl sm:text-lg text-lg font-bold">Tiendas</h1>
+  </header>
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
+    <article *ngFor="let store of stores">
+      <app-store-card
+        [store]="store"
+      ></app-store-card>
+    </article>
+  </section>
+</div>
