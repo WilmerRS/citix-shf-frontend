@@ -1,0 +1,19 @@
+<button
+  class="
+    disabled
+    hover:bg-gray-200
+    rounded-lg
+    hover:text-island-600
+    w-8
+    h-8
+    flex
+    items-center
+    justify-center
+  "
+  (click)="handleClick()"
+  [disabled]="disabled"
+>
+  <div class="">
+    <i class="w-5" [attr.data-feather]="icon"></i>
+  </div>
+</button>
