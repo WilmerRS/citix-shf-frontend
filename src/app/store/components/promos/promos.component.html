@@ -1,0 +1,26 @@
+<div>
+  <header class="flex justify-between items-end pb-3">
+    <div class="flex gap-3">
+      <i class="w-4 text-gray-400" data-feather="percent"></i>
+      <h1 class="md:text-xl sm:text-lg text-lg font-bold">Promos</h1>
+    </div>
+    <div class="flex">
+      <app-icon-button
+        [icon]="'arrow-left'"
+        [disabled]="true"
+      ></app-icon-button>
+      <app-icon-button
+        [icon]="'arrow-right'"
+        [disabled]="false"
+      ></app-icon-button>
+    </div>
+  </header>
+  <section class="flex gap-4 w-full bg-white rounded-lg p-4">
+    <article *ngFor="let promo of promos">
+      <app-promo-card
+        (onSelected)="onPromoClick($event)"
+        [promo]="promo"
+      ></app-promo-card>
+    </article>
+  </section>
+</div>
