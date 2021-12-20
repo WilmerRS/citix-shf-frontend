@@ -1,0 +1,118 @@
+<app-loading [isLoading]="isLoading"></app-loading>
+
+<section
+  *ngIf="!isLoading"
+  class="mt-16 pt-16 max-w-md flex flex-col justify-center items-center m-auto"
+>
+  <div class="pb-8">
+    <picture
+      class="
+        flex
+        justify-center
+        items-center
+        rounded-full
+        bg-gradient-to-b
+        from-island-300
+        to-blue-500
+        w-32
+        h-32
+      "
+    >
+      <img class="w-14" src="assets/logo-x.png" alt="logo-citix" />
+    </picture>
+  </div>
+  <form class="w-full" [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+    <h1 class="text-2xl md:text-3xl text-center font-black pb-8">
+      Ingresa a tu tienda
+    </h1>
+    <div class="w-full text-gray-500 focus-within:text-island-600 mb-5">
+      <div class="relative flex items-center justify-end mb-1">
+        <input
+          [formControl]="email"
+          class="
+            w-full
+            py-3
+            pl-5
+            pr-3
+            font-semibold
+            border-none
+            outline-none
+            rounded-lg
+            placeholder-gray-400
+            transition-opacity
+            focus:shadow-sm
+          "
+          placeholder="Correo electrónico"
+          type="email"
+        />
+        <i
+          class="absolute pointer-events-none w-5 mr-4"
+          data-feather="mail"
+        ></i>
+      </div>
+      <div *ngIf="email!.invalid && (email.dirty || email.touched)">
+        <div *ngIf="email!.errors?.['required']">
+          <span class="text-sm">El correo electrónico es requerido.</span>
+        </div>
+        <div *ngIf="email!.errors?.['email']">
+          <span class="text-sm"
+            >Debe ingresar un correo electrónico válido.</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="w-full text-gray-500 focus-within:text-island-600 mb-5">
+      <div class="relative flex items-center justify-end mb-1">
+        <input
+          [formControl]="password"
+          class="
+            w-full
+            py-3
+            pl-5
+            pr-3
+            font-semibold
+            border-none
+            outline-none
+            rounded-lg
+            placeholder-gray-400
+            transition-opacity
+            focus:shadow-sm
+          "
+          placeholder="Contraseña"
+          type="text"
+        />
+        <i class="absolute pointer-events-none w-5 mr-4" data-feather="key"></i>
+      </div>
+      <div *ngIf="password!.invalid && (password.dirty || password.touched)">
+        <div *ngIf="password!.errors?.['required']">
+          <span class="text-sm">La contraseña es requerida.</span>
+        </div>
+      </div>
+    </div>
+    <p
+      *ngIf="errorCredentialMessage != ''"
+      class="text-center text-red-800 pb-3"
+    >
+      {{ errorCredentialMessage }}
+    </p>
+
+    <button
+      [disabled]="loginForm.invalid || isSubmiting"
+      type="submit"
+      class="
+        btn-login
+        w-full
+        font-semibold
+        bg-island-300
+        hover:opacity-75
+        transition-colors
+        duration-300
+        text-white
+        py-2
+        rounded-lg
+      "
+    >
+      Ingresar
+    </button>
+  </form>
+</section>
